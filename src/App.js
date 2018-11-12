@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 
 class App extends Component {
     componentDidMount() {
@@ -24,6 +24,7 @@ class App extends Component {
                     >
                         Learn React
                     </a>
+                    <div class="button is-primary">button</div>
                 </header>
             </div>
         );
