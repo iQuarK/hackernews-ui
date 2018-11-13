@@ -4,6 +4,17 @@ import List from "../List";
 import "./styles.scss";
 
 class App extends Component {
+    componentWillMount() {
+        window.onscroll = ev => {
+            if (
+                window.innerHeight + window.scrollY >=
+                document.body.offsetHeight
+            ) {
+                this.props.onBottom();
+            }
+        };
+    }
+
     componentDidMount() {
         this.props.onGetNews();
     }
@@ -19,7 +30,8 @@ class App extends Component {
 }
 
 App.propTypes = {
-    onGetNews: PropTypes.func.isRequired
+    onGetNews: PropTypes.func.isRequired,
+    onBottom: PropTypes.func.isRequired
 };
 
 export default App;

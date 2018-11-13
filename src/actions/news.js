@@ -9,6 +9,10 @@ const getNewsById = (id, news) => ({
     news
 });
 
+export const getNextPage = () => ({
+    type: "NEXT_PAGE"
+});
+
 export const getNewsAsync = () => dispatch => {
     fetch("https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty")
         .then(response => response.json())
