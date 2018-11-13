@@ -1,0 +1,31 @@
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/components/card.sass";
+@import "bulma/sass/components/media.sass";
+@import "bulma/sass/grid/tiles.sass";
+@import "bulma/sass/elements/title.sass";
+@import "bulma/sass/elements/container.sass";
+
+.score {
+  border-radius: 5px;
+  border: thin solid $primary;
+  text-align: center;
+  font-weight: bold;
+  line-height: 35px;
+  h2 {
+    padding: 5px;
+    background-color: $primary;
+    color: white;
+    margin: 0;
+    line-height: 15px;
+  }
+}
+.title {
+  margin-top: 0;
+}
+.bar {
+  margin: 0 5px;
+}
+.link {
+  color: $link;
+  text-decoration: none;
+}
