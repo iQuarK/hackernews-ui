@@ -1,32 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { createStore, applyMiddleware } from "redux";
-import { Provider, connect } from "react-redux";
+import { Provider } from "react-redux";
 import rootReducer from "./reducers";
 import thunk from "redux-thunk";
-import { getNewsAsync } from "./actions/news";
+import ConnectedApp from "./components/App";
 import "./index.css";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
-
-// receives the data from the reducer to make the list of orders
-const mapStateToProps = state => ({
-    news: state.news.list
-});
-
-// maps the action into a function inside the component
-const mapDispatchToProps = dispatch => ({
-    onGetNews: () => {
-        dispatch(getNewsAsync());
-    }
-});
-
-const ConnectedApp = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(App);
 
 ReactDOM.render(
     <Provider store={store}>

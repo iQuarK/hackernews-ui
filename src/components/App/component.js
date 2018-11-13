@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import List from "./components/List";
-import "./App.scss";
+import List from "../List";
+import "./styles.scss";
 
 class App extends Component {
     componentDidMount() {
@@ -19,7 +19,6 @@ class App extends Component {
 }
 
 App.propTypes = {
-    news: PropTypes.array.isRequired,
     onGetNews: PropTypes.func.isRequired
 };
 

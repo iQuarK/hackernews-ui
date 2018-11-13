@@ -1,15 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import LazyLoad from "react-lazyload";
 import Item from "../Item";
 import "./styles.scss";
 
 const List = ({ news }) => (
-    <div class="columns">
+    <div>
         {news &&
             news.map(n => (
-                <div className="column" key={n.id}>
-                    <Item news={n} />
-                </div>
+                <LazyLoad height={120} key={n}>
+                    <div>
+                        <Item news={n} />
+                    </div>
+                </LazyLoad>
             ))}
     </div>
 );

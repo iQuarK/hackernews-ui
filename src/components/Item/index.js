@@ -1,3 +1,3 @@
-import Item from "./component";
+import ConnectedItem from "./redux";
 
-export default Item;
+export default ConnectedItem;
